@@ -55,8 +55,8 @@ public with sharing class SOQL {
     public static List<Id> getContactIds() {
         List<Contact> listOfContactIds = [SELECT Id FROM Contact WHERE LastName IN ('Smith' , 'Jones')];
         Set<Id> setOfContactIds = (new Map<Id,Contact>(listOfContactIds)).keySet();
-        List<Id> IdsFromSetToList = new List<Id>(setOfContactIds);
-        return IdsFromSetToList;
+        List<Id> idsFromSetToList = new List<Id>(setOfContactIds);
+        return idsFromSetToList;
     }
 
     /**
